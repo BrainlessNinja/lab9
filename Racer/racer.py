@@ -22,6 +22,7 @@ SCREEN_WIDTH = 400
 SCREEN_HEIGHT = 600
 SPEED = 5
 SCORE = 0
+COINS = 0
  
 #Setting up Fonts
 font = pygame.font.SysFont("Verdana", 60)
@@ -123,6 +124,8 @@ while True:
     DISPLAYSURF.blit(background, (0,0))
     scores = font_small.render(str(SCORE), True, BLACK)
     DISPLAYSURF.blit(scores, (10,10))
+    coin_scores = font_small.render(str(COINS), True, BLACK)
+    DISPLAYSURF.blit(coin_scores, (10,30))
  
     #Moves and Re-draws all Sprites
     if SCORE >= 25:
@@ -153,7 +156,7 @@ while True:
           pygame.mixer.Sound('coin.wav').play()
           for entity in coin_add:
                 entity.kill() 
-                SCORE += 2
+                COINS += Coin1.weight
                 Coin1 = Coin()
     pygame.display.update()
     FramePerSec.tick(FPS)

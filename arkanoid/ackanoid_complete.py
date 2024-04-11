@@ -1,5 +1,6 @@
 import pygame 
 import random
+import sys
 import time
 pygame.init()
 
@@ -33,7 +34,7 @@ game_score_rect = game_score_text.get_rect()
 game_score_rect.center = (210, 20)
 
 # Catching sound
-collision_sound = pygame.mixer.Sound('audio/catch.mp3')
+collision_sound = pygame.mixer.Sound('lab9/arkanoid/audio/catch.mp3')
 
 # Additional parameters
 unbreakable_chance = 0.05  # Chance for a brick to be unbreakable

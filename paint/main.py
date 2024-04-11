@@ -107,6 +107,10 @@ def main():
                         elif tool == 'eraser':
                             rectangles = [(rect, rect_color) for rect, rect_color in rectangles if not rect.collidepoint(end)]
                             circles = [(center, radius, circle_color) for center, radius, circle_color in circles if ((end[0]-center[0])**2 + (end[1]-center[1])**2)**0.5 > radius]
+                            squares = [(square, square_color) for square, square_color in squares if not square.collidepoint(end)]
+                            right_triangles = [(triangle, triangle_color) for triangle, triangle_color in right_triangles if not triangle.collidepoint(end)]
+                            equilateral_triangles = [(triangle, triangle_color) for triangle, triangle_color in equilateral_triangles if not triangle.collidepoint(end)]
+                            rhombuses = [(rhombus, rhombus_color) for rhombus, rhombus_color in rhombuses if not rhombus.collidepoint(end)]
                         start = None
                         current = None
 
